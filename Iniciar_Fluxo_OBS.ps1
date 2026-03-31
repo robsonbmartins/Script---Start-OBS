@@ -1,10 +1,10 @@
 <#
 .SYNOPSIS
-    Script unificado para inicialização e encerramento do fluxo de gravação (Insta360 -> NVIDIA Broadcast -> OBS).
+    Script unificado para inicializacao e encerramento do fluxo de gravacao (Insta360 -> NVIDIA Broadcast -> OBS).
 #>
 
 # ==========================================
-# IMPORTAÇÃO DE FUNÇÕES DO WINDOWS (API)
+# IMPORTACAO DE FUNCOES DO WINDOWS (API)
 # ==========================================
 # Isso permite enviar o comando "Minimizar" nativo do Windows para qualquer janela
 Add-Type -TypeDefinition @"
