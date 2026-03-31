@@ -20,7 +20,7 @@ public class Win32 {
 "@
 
 # ==========================================
-# CONFIGURAÇÕES DE DIRETÓRIOS (Lidos via config.json)
+# CONFIGURAÇÕES DE DIRETORIOS (Lidos via config.json)
 # ==========================================
 $configFile = Join-Path $PSScriptRoot "config.json"
 if (Test-Path $configFile) {
@@ -29,7 +29,8 @@ if (Test-Path $configFile) {
     $nvidiaBroadcastPath = $config.NvidiaBroadcast
     $obsPath = $config.OBS
     $obsWorkingDirectory = $config.OBSDir
-} else {
+}
+else {
     # Valores padrão de proteção
     $insta360Path = "C:\Program Files\Insta360 Link Controller\Insta360 Link Controller.exe"
     $nvidiaBroadcastPath = "C:\Program Files\NVIDIA Corporation\NVIDIA Broadcast\NVIDIA Broadcast.exe"
@@ -80,7 +81,8 @@ function Start-App {
         Minimize-App -ProcessName $AppName
         
         Write-Host "[$AppName] Carregamento concluído e forçado para bandeja." -ForegroundColor Green
-    } else {
+    }
+    else {
         Write-Host "AVISO: Executável não encontrado em $Path" -ForegroundColor Yellow
         Write-Host "Verifique os caminhos na seção de configuração." -ForegroundColor Yellow
     }
@@ -115,7 +117,8 @@ if (Test-Path $obsPath) {
     [Win32]::ShowWindow($consolePtr, 9) | Out-Null
     
     Write-Host "`n[OBS Studio] Foi fechado. Iniciando rotina de encerramento." -ForegroundColor Yellow
-} else {
+}
+else {
     Write-Host "ERRO: O executável do OBS Studio não foi encontrado em $obsPath." -ForegroundColor Red
     Write-Host "Pressione qualquer tecla para sair..."
     $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown") | Out-Null
