@@ -4,7 +4,7 @@
 #>
 
 # ==========================================
-# IMPORTACAO DE FUNCOES DO WINDOWS (API)
+# IMPORTACAO DE FUNÇOES DO WINDOWS (API)
 # ==========================================
 # Isso permite enviar o comando "Minimizar" nativo do Windows para qualquer janela
 Add-Type -TypeDefinition @"
